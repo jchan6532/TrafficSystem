@@ -33,7 +33,7 @@ namespace Mobiles
             {
                 return this.vin;
             }
-            private set
+            protected set
             {
                 this.vin = Vehicle.CheckForValidVin(value) == true ? value : VinConstants.Undefined.ToString();
             }
@@ -92,8 +92,16 @@ namespace Mobiles
         public int Lane
         {
             get;
-            private set;
+            protected set;
         } = (int)LaneTypes.Undefined;
+
+        /// <summary>
+        /// Number of doors on the vehicle
+        /// </summary>
+        public int NumberOfDoors
+        {
+            get;
+        } = -1;
 
         #endregion
 
@@ -116,7 +124,7 @@ namespace Mobiles
         {
             this.Vin = vin;
             this.VehicleType = vehicleType;
-
+            this.NumberOfDoors = Vehicle.FindDoorCount(vehicleType);
         }
 
         #endregion
@@ -127,10 +135,54 @@ namespace Mobiles
         /// Checking for valid VIN
         /// </summary>
         /// <param name="vin"></param>
-        /// <returns></returns>
+        /// <returns>True if valid vin</returns>
         public static bool CheckForValidVin(string vin)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(vin))
+            {
+                return false;
+            }
+
+            //implement code to check database
+            return true;
+        }
+
+        /// <summary>
+        /// Finds the door count based on vehicle type
+        /// </summary>
+        /// <param name="vehicleType">Vehicle type</param>
+        /// <returns>Number of doors</returns>
+        public static int FindDoorCount(VehicleType vehicleType)
+        {
+            int result = -1;
+            switch (vehicleType)
+            {
+                case VehicleType.Undefined:
+                    result = -1;
+                    break;
+
+                case VehicleType.Sedan:
+                case VehicleType.HatchBack:
+                case VehicleType.SUV:
+                case VehicleType.PickupTruck:
+                case VehicleType.Truck:
+                    result = 4;
+                    break;
+
+                case VehicleType.Coupe:
+                    result = 2;
+                    break;
+
+                case VehicleType.Motorcycle:
+                case VehicleType.MotorBike:
+                    result = 0;
+                    break;
+
+                default:
+                    break;
+            }
+
+            return result;
         }
 
         #endregion
