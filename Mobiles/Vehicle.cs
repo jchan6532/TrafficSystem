@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Constants;
+
 using Constants.VehicleConstants;
 
 namespace Mobiles
@@ -86,6 +86,15 @@ namespace Mobiles
             set;
         } = 0;
 
+        /// <summary>
+        /// Lane vehicle is on
+        /// </summary>
+        public int Lane
+        {
+            get;
+            private set;
+        } = (int)LaneTypes.Undefined;
+
         #endregion
 
         #region Contructor
@@ -105,7 +114,7 @@ namespace Mobiles
         /// <param name="vehicleType">Vehicle Type</param>
         public Vehicle(string vin, VehicleType vehicleType)
         {
-            this.vin = vin;
+            this.Vin = vin;
             this.VehicleType = vehicleType;
 
         }
