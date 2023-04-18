@@ -4,12 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Mobiles;
+using Constants.VehicleConstants;
+
 namespace Server
 {
     class Program
     {
         static void Main(string[] args)
         {
+            try
+            {
+                var a = new Car("sad", VehicleType.Sedan);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
