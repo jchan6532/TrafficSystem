@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobiles", "Mobiles\Mobiles.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constants", "Constants\Constants.csproj", "{1E37FE7E-6224-44A6-8884-80CFEB925B63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{812929BB-6A9D-4573-AC5F-AF09AC547742}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1E37FE7E-6224-44A6-8884-80CFEB925B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E37FE7E-6224-44A6-8884-80CFEB925B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E37FE7E-6224-44A6-8884-80CFEB925B63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{812929BB-6A9D-4573-AC5F-AF09AC547742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{812929BB-6A9D-4573-AC5F-AF09AC547742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{812929BB-6A9D-4573-AC5F-AF09AC547742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{812929BB-6A9D-4573-AC5F-AF09AC547742}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
