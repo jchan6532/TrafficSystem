@@ -9,8 +9,13 @@ namespace Constants
     /// <summary>
     /// Vehicle Type enumeration
     /// </summary>
-    enum VehicleType
+    public enum VehicleType
     {
+        /// <summary>
+        /// Undefined Vehicle Type
+        /// </summary>
+        Undefined,
+
         /// <summary>
         /// Sedan
         /// </summary>
