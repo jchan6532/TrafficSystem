@@ -46,10 +46,11 @@ namespace Database
         {
             try
             {
-                string user = ConfigurationSettings.AppSettings.Get("");
-                string password = ConfigurationSettings.AppSettings.Get("");
-                string ip = ConfigurationSettings.AppSettings.Get("");
-                string port = ConfigurationSettings.AppSettings.Get("");
+                string user = ConfigurationSettings.AppSettings.Get("UserName");
+                string password = ConfigurationSettings.AppSettings.Get("Password");
+                string databaseName = ConfigurationSettings.AppSettings.Get("Database");
+                string ip = ConfigurationSettings.AppSettings.Get("DatabaseIP");
+                string port = ConfigurationSettings.AppSettings.Get("DatabasePort");
 
                 this.Connection = new MySqlConnection(this.ConnectionString);
                 this.Connection.Open();
