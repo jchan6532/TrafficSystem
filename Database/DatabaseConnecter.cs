@@ -12,7 +12,7 @@ namespace Database
     /// <summary>
     /// Database Connecter
     /// </summary>
-    public class DatabaseConnecter
+    public class DatabaseConnecter : IQueries
     {
         /// <summary>
         /// SQL connection
