@@ -54,6 +54,10 @@
       <Project>{1e37fe7e-6224-44a6-8884-80cfeb925b63}</Project>
       <Name>Constants</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Database\Database.csproj">
+      <Project>{812929bb-6a9d-4573-ac5f-af09ac547742}</Project>
+      <Name>Database</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Mobiles\Mobiles.csproj">
       <Project>{4b35bf7e-baf3-48f8-b71e-facf60693b91}</Project>
       <Name>Mobiles</Name>
