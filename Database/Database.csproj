@@ -83,7 +83,7 @@
   <ItemGroup>
     <Compile Include="DatabaseConnecter.cs" />
     <Compile Include="DatabaseQueryArgs.cs" />
-    <Compile Include="IQueries.cs" />
+    <Compile Include="QueriesBase.cs" />
     <Compile Include="ModelQueryOperations\VehicleQueryOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryMode.cs" />

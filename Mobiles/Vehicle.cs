@@ -12,7 +12,7 @@ namespace Mobiles
     /// <summary>
     /// Vehicle base class
     /// </summary>
-    public class Vehicle : IQueries
+    public class Vehicle : QueriesBase
     {
         #region Private Fields
 
