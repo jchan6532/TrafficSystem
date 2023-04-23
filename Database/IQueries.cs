@@ -11,7 +11,7 @@ namespace Database
         /// <summary>
         /// Creates this instance.
         /// </summary>
-        void Create();
+        void Create(List<object> data);
 
         /// <summary>
         /// Reads this instance.

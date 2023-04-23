@@ -84,12 +84,19 @@
     <Compile Include="DatabaseConnecter.cs" />
     <Compile Include="DatabaseQueryArgs.cs" />
     <Compile Include="IQueries.cs" />
+    <Compile Include="ModelQueryOperations\VehicleQueryOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryMode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Constants\Constants.csproj">
+      <Project>{1e37fe7e-6224-44a6-8884-80cfeb925b63}</Project>
+      <Name>Constants</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
