@@ -28,7 +28,7 @@ namespace Mobiles
         /// </summary>
         public Car(string vin, VehicleType vehicleType) : base(vin, vehicleType)
         {
-            this.Vin = "Sfd";
+            
         }
 
         #endregion

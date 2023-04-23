@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Mobiles;
 using Constants.VehicleConstants;
+using Database;
 
 namespace Server
 {
@@ -15,7 +16,7 @@ namespace Server
         {
             try
             {
-                var a = new Car("sad", VehicleType.Sedan);
+                DatabaseConnecter db = new DatabaseConnecter();
             }
             catch (Exception e)
             {
