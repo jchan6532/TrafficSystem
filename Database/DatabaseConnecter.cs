@@ -82,5 +82,23 @@ namespace Database
 
             return numRows;
         }
+
+        public object ReadTable(string columnName)
+        {
+            object result = null;
+            try
+            {
+                this.Adapter = new MySqlDataAdapter(this.Command);
+                this.Table.Clear();
+                this.Adapter.Fill(this.Table);
+                result = this.Table.Rows[0].Field<object>(columnName);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+            return result;
+        }
     }
 }

@@ -16,16 +16,16 @@ namespace Database
         /// <summary>
         /// Reads this instance.
         /// </summary>
-        void Read();
+        object Read(string columnName, int id, string whereClause = "");
 
         /// <summary>
         /// Updates this instance.
         /// </summary>
-        void Update();
+        void Update(int id, List<object> newUpdatedValues, List<string> updatingColumns, string whereClause = "");
 
         /// <summary>
         /// Deletes this instance.
         /// </summary>
-        void Delete();
+        void Delete(int id, string whereClause = "");
     }
 }
