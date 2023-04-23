@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Constants.VehicleConstants;
+using Database;
 
 namespace Mobiles
 {
     /// <summary>
     /// Vehicle base class
     /// </summary>
-    public class Vehicle
+    public class Vehicle : IQueries
     {
         #region Private Fields
 
@@ -24,6 +25,12 @@ namespace Mobiles
 
         #region Public Properties
 
+        public string VehicleID 
+        { 
+            get;
+            private set;
+        } = null;
+
         /// <summary>
         /// VIN number
         /// </summary>
@@ -33,7 +40,7 @@ namespace Mobiles
             {
                 return this.vin;
             }
-            protected set
+            private set
             {
                 this.vin = Vehicle.CheckForValidVin(value) == true ? value : VinConstants.Undefined.ToString();
             }
