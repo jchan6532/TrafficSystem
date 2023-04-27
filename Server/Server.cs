@@ -13,22 +13,46 @@ namespace Server
 {
     public class Server
     {
+        #region Private Fields
+
         /// <summary>
         /// Database connecter
         /// </summary>
         private DatabaseConnecter _connecter = null;
 
+        /// <summary>
+        /// TCP listener
+        /// </summary>
         private TcpListener _listener = null;
 
+        /// <summary>
+        /// Remote endpoint
+        /// </summary>
         private IPEndPoint _endPoint = null;
 
+        /// <summary>
+        /// Remote ip address
+        /// </summary>
         private IPAddress _ip = null;
 
+        /// <summary>
+        /// Remote port number
+        /// </summary>
         private int _port = -1;
 
+        /// <summary>
+        /// Vehicle data structure
+        /// </summary>
         private Dictionary<string, Vehicle> _vehicles = null;
 
+        /// <summary>
+        /// volatile flag for running server
+        /// </summary>
         private volatile bool _done = false;
+
+        #endregion
+
+        #region Constructor
 
         public Server()
         {
@@ -52,6 +76,10 @@ namespace Server
             }
         }
 
+        #endregion
+
+        #region Private Methods
+
         private void Start()
         {
             while (!this._done)
@@ -67,9 +95,12 @@ namespace Server
         private void Acceptclient(object tcpClient)
         {
             TcpClient client = tcpClient as TcpClient;
-            NetworkStream stream = client.GetStream();
+            Vehicle vehicle = new Vehicle();
+            vehicle.Stream = client.GetStream();
 
 
         }
+
+        #endregion
     }
 }

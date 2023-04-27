@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,7 @@ namespace Mobiles
     /// <summary>
     /// Vehicle base class
     /// </summary>
-    public class Vehicle : QueriesBase
+    public class Vehicle
     {
         #region Private Fields
 
@@ -20,6 +21,15 @@ namespace Mobiles
         /// VIN number
         /// </summary>
         private string vin;
+
+        #endregion
+
+        #region Public Properties
+
+        /// <summary>
+        /// TCP network stream
+        /// </summary>
+        public NetworkStream Stream { get; set; }
 
         #endregion
 
