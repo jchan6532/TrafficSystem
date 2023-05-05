@@ -65,14 +65,13 @@ namespace Services
             {
                 case nameof(RequestObj):
                     RequestObj requestObj = serializedObj as RequestObj;
-
                     XmlNode vehicleIdNode = doc.CreateElement(nameof(requestObj.vehicleID));
                     vehicleIdNode.InnerText = requestObj.vehicleID.ToString();
                     root.AppendChild(vehicleIdNode);
 
                     break;
                 case nameof(ResponseObj):
-
+                    ResponseObj responseObj = serializedObj as ResponseObj;
                     break;
                 default:
                     break;
